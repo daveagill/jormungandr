@@ -1,43 +1,65 @@
-![](https://alageek.com/img/alageek-logo.png)
+# Jörmungandr :: A Minimalist Hugo Theme
 
-# hugo-alageek-theme
-A [Cocoa Enhaced](https://github.com/mtn/cocoa-eh-hugo-theme) based theme. It's rewritten with **Bootstrap 4**.
+**Jörmungandr** (pronounced: _yor-mun-gan-der_) is a minimalist Hugo theme suited for blogging and personal websites.
 
-<a href="https://www.patreon.com/gkmngrgn" title="Donate to this project using Patreon">
-    <img src="https://img.shields.io/badge/become%20a%20patron-F96854.svg?longCache=true&style=for-the-badge"
-         alt="Patreon donate button" />
-</a>
+Originally forked from the [alaGeek](https://github.com/gkmngrgn/hugo-alageek-theme) theme (which is itself derived from the [Cocoa Enhaced](https://github.com/mtn/cocoa-eh-hugo-theme) theme) and now includes several additional features and style changes.
 
-<a href="https://www.buymeacoffee.com/gokmen" title="Buy me a coffee!">
-    <img src="https://img.shields.io/badge/buy%20me%20a%20coffee-%23FF813F.svg?longCache=true&style=for-the-badge"
-         alt="BMC donate button" />
-</a>
+## Key Features
 
-Websites that are using hugo with alaGeek theme:
+* Minimalist, single-column, responsive design with beautiful typography.
+* Display N number of latest posts and pinned posts.
+* Syntax highlighting with `hightlight.js`.
+* LaTeX support with `MathJax`.
+* Twitter cards.
+* `planned:` Disqus comments system.
+* `planned:` Thumbnail images using a Hugo shortcode
+* Internationalization.
 
-* https://alageek.com
-* https://gokmengorgen.net
+## Easily Customized
 
-## Features
+* `planned:` Configurable colors.
+* `planned:` Configurable fonts.
+* `planned:` Show/hide taxonomies on /blogs section.
+* `planned:` Show/Hide SVG social icons in header, footer or both.
+* `planned:` Add custom CSS scripts.
+* Add custom scripts with `footer_extra.html`.
 
-* Possibility to have sections with a header and a list of articles.
-* Possibility to have single pages.
-* Possibility to add a Twitter, Mastodon, Facebook, 500px, GitHub, GitLab, Flattr, and Linkedin accounts to the footer.
-* Homepage with latest and best posts.
-* Syntax highlighting with `hightlightjs`.
-* Progressive images.
-* Twitter cards support.
-* LaTeX support with MathJax.
-* Possibility to add extra scripts with `footer_extra.html`.
+## Beautiful Typography
 
-## Supported Languages
+* _Raleway_ for the titles, light but clearly visible
+* _Merriweather_ for the text, an awesome sans serif font to read without difficulties
+* _Menlo_ for the code
 
-* English (Default)
-* Turkish
+## Quick Start
 
-## TODO
+## Step 1 -- Install the theme
 
-* Printer friendly output
+If you manage your Hugo site using Git then you can add the theme as a submodule.
+
+Alternatively you can download the theme as a zip archive and extract it.
+
+#### To add as a Git Submodule
+* Run the following commands:
+
+      cd /path/to/your/hugo/site
+      git submodule add https://github.com/daveagill/jormungandr.git themes/jormundandr
+
+* In the future, to update to the latest version of the theme:
+
+      git submodule update --remote
+
+#### To download as a Zip
+
+* [Download the Zip](https://github.com/daveagill/jormungandr/archive/master.zip)
+* Extract to: themes/jormundandr
+
+### Step 2 -- Update config.toml
+
+Set the `theme` property in your `config.toml` file:
+
+    theme = "jormundandr"
+
+Look at the [example site](https://github.com/daveagill/jormungandr/tree/master/exampleSite) to see other config options that you can set.
 
 ## Dependency versions
 
@@ -48,12 +70,6 @@ Websites that are using hugo with alaGeek theme:
 * progressively: 1.2.5
 * webfont: 1.6.28
 
-## Typography
-
-* *Raleway* for the titles, light but clearly visible
-* *Merriweather* for the text, an awesome sans serif font to read without difficulties
-* *Menlo* for the code
-
 ## License
 
-Licensed under the MIT License. See the LICENSE.md file for more details.
+Licensed under the MIT License. See LICENSE.md.

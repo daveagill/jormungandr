@@ -1,17 +1,17 @@
-name = "alaGeek"
+name = "Jörmungandr"
 license = "MIT"
-licenselink = "https://github.com/gkmngrgn/hugo-alageek-theme/blob/master/LICENSE.md"
-description = "alaGeek website specific theme."
-homepage = "https://alageek.com"
-tags = ["clean", "fast", "responsive", "typography"]
-features = ["flexible", "fast", "highlights", "progressive images"]
+licenselink = "https://github.com/daveagill/jormungandr/blob/master/LICENSE.md"
+description = "Jörmungandr is a minimalist, responsive Hugo theme."
+homepage = "https://github.com/daveagill/jormungandr"
+tags = ["minimalist", "clean", "responsive", "typography"]
+features = ["flexible", "fast", "highlight.js", "thumbnails", "internationalization"]
 min_version = 0.40.3
 
 [author]
-  name = "Gökmen Görgen"
-  homepage = "https://gokmengorgen.net"
+  name = "David Gill"
+  homepage = "http://gilldave.co.uk"
 
 [original]
-    name = "Alexis Tacnet"
-    homepage = "https://fuegowolf.me/"
-    repo = "https://github.com/fuegowolf/cocoa-eh-hugo-theme"
+    name = "Gökmen Görgen"
+    homepage = "https://gokmengorgen.net"
+    repo = "https://github.com/gkmngrgn/hugo-alageek-theme"

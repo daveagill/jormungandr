@@ -1,25 +1,26 @@
 +++
-title = "alaGeek Theme"
-date = "2014-04-09"
-menu = "main"
+title = "Jörmungandr Theme"
+date = "2019-01-01"
 +++
 
-![](https://alageek.com/img/alageek-logo.png)
+**Jörmungandr** (pronounced: _yor-mun-gan-der_) is a minimalist Hugo theme suited for blogging and personal websites.
 
-A **Cocoa Enhaced** based theme. It's rewritten with **Bootstrap 4**.
+## Key Features
 
-Websites that are using hugo with alaGeek theme:
+* <mark>Minimalist, single-column, responsive design with beautiful typography.</mark>
+* Display N number of latest posts and pinned posts.
+* Syntax highlighting via `hightlight.js`.
+* LaTeX support via `MathJax`.
+* Twitter cards.
+* Internationalization.
 
-* https://alageek.com
-* https://gokmengorgen.net
+> <span class="badge badge-warning">Blogs</span>
+<span class="badge badge-warning">Personal Websites</span>\
+<span class="badge badge-primary">Hugo</span>
+<span class="badge badge-primary">Typography</span>
+<span class="badge badge-primary">Minimalist</span>\
+<span class="badge badge-success">Syntax Highlighting</span>
+<span class="badge badge-success">MathJax</span>
+<span class="badge badge-success">Twitter cards</span>
 
-## Features
-
-* Possibility to have sections with a header and a list of articles.
-* Possibility to have single pages.
-* Homepage with latest and best posts.
-* Syntax highlighting with `hightlightjs`.
-* Progressive images.
-* Twitter cards support.
-* LaTeX support with MathJax.
-* Possibility to add extra scripts with `footer_extra.html`.
+<small>(Snake photo by David Clode from Unsplash)</small>
