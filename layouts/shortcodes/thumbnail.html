@@ -1,0 +1,28 @@
+{{ $sizeParam := .Get 0 }}
+{{ $srcParam := .Get 1 }}
+{{ $titleParam := .Get 2 }}
+{{ if .IsNamedParams }}
+    {{ $sizeParam = .Get "size" }}
+    {{ $srcParam = .Get "src" }}
+    {{ $titleParam = .Get "title" }}
+{{ end }}
+
+{{ $original := .Page.Resources.GetMatch $srcParam }}
+{{ if $original }}
+    {{ $thumbnail := $original.Resize $sizeParam }}
+    {{ $title := default $original.Title $titleParam }}
+
+    <figure style="text-align:center;">
+        <a href="{{ $original.RelPermalink }}">
+            <img
+                style="max-width: 100%; height: auto;"
+                src="{{ $thumbnail.RelPermalink }}"
+                width="{{ $thumbnail.Width }}"
+                height="{{ $thumbnail.Height }}"
+                title="{{ $title }}"
+                alt="{{ $title }}" >
+        </a>
+    </figure>
+{{ else }}
+    {{ errorf "Shortcode 'thumbnail'.\nError at: %s\nUnable to find image resource: \"%s\"" .Position $srcParam }}
+{{ end }}

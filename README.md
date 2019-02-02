@@ -12,7 +12,7 @@ Originally forked from the [alaGeek](https://github.com/gkmngrgn/hugo-alageek-th
 * LaTeX support with `MathJax`.
 * Twitter cards.
 * `planned:` Disqus comments system.
-* `planned:` Thumbnail images using a Hugo shortcode
+* Thumbnail images using a Hugo shortcode.
 * Internationalization.
 
 ## Easily Customized
