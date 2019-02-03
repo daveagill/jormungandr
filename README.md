@@ -12,12 +12,12 @@ Originally forked from the [alaGeek](https://github.com/gkmngrgn/hugo-alageek-th
 * LaTeX support with `MathJax`.
 * Twitter cards.
 * `planned:` Disqus comments system.
-* Thumbnail images using a Hugo shortcode.
+* `new:` Thumbnail images using a Hugo shortcode.
 * Internationalization.
 
-## Easily Customized
+## Easily Customized (via config.toml)
 
-* `planned:` Configurable colors.
+* `new:` Custom page background color.
 * `planned:` Configurable fonts.
 * `planned:` Show/hide taxonomies on /blogs section.
 * `planned:` Show/Hide SVG social icons in header, footer or both.
