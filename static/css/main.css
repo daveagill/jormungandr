@@ -16,19 +16,6 @@ a:hover {
     color: #2a6496;
 }
 
-/* Partial: Colors */
-.text-patreon {
-    color: #F96854 !important;
-}
-
-.text-ko-fi {
-    color: #DF5000 !important;
-}
-
-.text-bmc {
-    color: #FF813F !important;
-}
-
 /* Partial: Header */
 .header a:hover {
     text-decoration: none;
