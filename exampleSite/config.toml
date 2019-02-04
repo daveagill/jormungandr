@@ -11,6 +11,7 @@ theme = "jormungandr"
     copyrightUrl = "https://themes.gohugo.io/theme/jormungandr/"
     faviconfile = "img/favicon.ico"
     logofile = "img/logo.jpg"
+    logoAsCircle = true
     latestpostcount = 5
     github = "daveagill/jormungandr"
     

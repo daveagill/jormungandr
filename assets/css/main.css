@@ -31,6 +31,9 @@ a:hover {
 
 .header .logo {
     max-height: 120px;
+    {{ if .Site.Params.logoAsCircle }}
+        border-radius: 50%;
+    {{ end }}
 }
 
 .header h1.name {
