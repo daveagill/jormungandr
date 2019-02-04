@@ -18,6 +18,10 @@ theme = "jormungandr"
     highlightjs = true
     posts_navigation = true
 
+    [params.taxonomies]
+        showOnBlogSection = true
+        minUsage = 0
+
 [[params.best_posts]]
     title = "Migrate to Hugo from Jekyll"
     url = "/blog/migrate-from-jekyll/"

@@ -11,6 +11,26 @@
 
                     <div class="mx-0 mx-md-4 posts">
                         <h1>{{ i18n "blog_posts" }}</h1>
+
+                        {{ if .Site.Params.taxonomies.showOnBlogSection }}
+                            <div class="mb-4 mb-md-5 mt-4">
+                                {{ range $taxonomyName, $taxonomy := .Site.Taxonomies }}
+                                    {{ if $taxonomy }}
+                                        {{ $taxonomyHref := path.Join ("/" | relLangURL) ($taxonomyName | urlize) }}
+                                        <h8 class="text-capitalize"><a href="{{ $taxonomyHref }}">{{ $taxonomyName }}</a></h8>
+                                        <p class="mb-3 ml-1">
+                                            {{ range where $taxonomy.ByCount ".Count" ">" (.Site.Params.taxonomies.minUsage | default 0) }}
+                                                <a href="{{ path.Join $taxonomyHref (.Term | urlize) }}" class="tax-term badge badge-info">
+                                                    {{ .Term }}
+                                                    <span class="badge badge-light">{{ .Count }}</span>
+                                                </a>
+                                            {{ end }}
+                                        </p>
+                                    {{end}}
+                                {{ end }}
+                            </div>
+                        {{ end }}
+
                         <ul class="list-unstyled">
                             {{ range .Data.Pages.GroupByDate "Jan, 2006" "desc"}}
                                 <li class="groupby">{{ .Key }}</li>
