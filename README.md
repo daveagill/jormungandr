@@ -18,7 +18,7 @@ Originally forked from the [alaGeek](https://github.com/gkmngrgn/hugo-alageek-th
 ## Easily Customized (via config.toml)
 
 * `new:` Custom page background color.
-* `planned:` Configurable fonts.
+* `new:` Configurable fonts.
 * `planned:` Show/hide taxonomies on /blogs section.
 * `planned:` Show/Hide SVG social icons in header, footer or both.
 * `planned:` Add custom CSS scripts.

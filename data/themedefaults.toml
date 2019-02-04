@@ -1,0 +1,16 @@
+[colors]
+    body = "#FFFEFB"
+
+[fonts]
+    googleFonts = [
+        "Merriweather:300,300i,700,700i",
+        "Raleway:400,600,700"
+    ]
+
+    body = "Merriweather, Palatino, Georgia, serif"
+    siteTitle = "inherit"
+    menu = "inherit"
+    postHeading = "Raleway, sans-serif"
+    meta = "Raleway, sans-serif"
+    taxonomyTerm = "SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",Courier,monospace"
+    code = "SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",Courier,monospace"

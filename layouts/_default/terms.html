@@ -8,10 +8,10 @@
                     <div class="markdown">
                         <h1 class="mx-0 mx-md-4">{{ .Title }}</h1>
 
-                        <p class="h4">
+                        <p class="h4 tax-term">
                             {{ $data := .Data }}
                             {{ range $key, $value := .Data.Terms.Alphabetical }}
-                                <a href="{{ $value.Name | urlize }}" class="badge badge-light text-monospace">
+                                <a href="{{ $value.Name | urlize }}" class="badge badge-light">
                                     {{ $value.Name }}
                                     <span class="badge badge-secondary">{{ $value.WeightedPages.Count }}</span>
                                 </a>

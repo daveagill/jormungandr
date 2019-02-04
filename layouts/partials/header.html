@@ -16,7 +16,7 @@
                 <ul class="nav nav-primary">
                     {{ range .Site.Menus.primary.ByWeight }}
                         <li class="nav-item">
-                            <a class="text-uppercase nav-link{{ if .Identifier }} text-{{ .Identifier }}{{ end }}" href="{{ .URL }}">
+                            <a class="nav-link{{ if .Identifier }} text-{{ .Identifier }}{{ end }}" href="{{ .URL }}">
                                 {{ .Pre }}
                                 {{ .Name }}
                             </a>

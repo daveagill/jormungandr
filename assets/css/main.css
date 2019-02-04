@@ -1,6 +1,6 @@
-/* Global styles */
 body {
-    font-family: "Raleway";
+    background-color: {{ .Site.Params.colors.body | default .Site.Data.themedefaults.colors.body }};
+    font-family: {{ .Site.Params.fonts.body | default .Site.Data.themedefaults.fonts.body }};
 }
 
 a {
@@ -16,6 +16,14 @@ a:hover {
     color: #2a6496;
 }
 
+.post-heading {
+    font-family: {{ .Site.Params.fonts.postHeading | default .Site.Data.themedefaults.fonts.postHeading }};
+}
+
+.tax-term {
+    font-family: {{ .Site.Params.fonts.taxonomyTerm | default .Site.Data.themedefaults.fonts.taxonomyTerm }};
+}
+
 /* Partial: Header */
 .header a:hover {
     text-decoration: none;
@@ -26,15 +34,15 @@ a:hover {
 }
 
 .header h1.name {
+    font-family: {{ .Site.Params.fonts.siteTitle | default .Site.Data.themedefaults.fonts.siteTitle }};
     color: #333333;
     font-size: 2.3rem;
-    font-family: "Helvetica Neue", "Arial", sans-serif;
     letter-spacing: 0.1rem;
 }
 
 .header ul.nav li a {
-    color: #666666;
-    font-size: 14px;
+    font-family: {{ .Site.Params.fonts.menu | default .Site.Data.themedefaults.fonts.menu }};
+    font-size: 18px;
     padding: 3px 5px 0 5px;
 }
 
@@ -59,6 +67,7 @@ a:hover {
 }
 
 .content .meta {
+    font-family: {{ .Site.Params.fonts.meta | default .Site.Data.themedefaults.fonts.meta }};
     font-size: 14px;
     color: #666666;
 }
@@ -91,7 +100,6 @@ a:hover {
 }
 
 .content .markdown {
-    font-family: "Merriweather";
     font-size: 1.1em;
     line-height: 1.75em;
     color: #313537;
@@ -123,7 +131,7 @@ a:hover {
 
 .content .markdown code,
 .content .markdown pre {
-    font-family: "Menlo", monospace;
+    font-family: {{ .Site.Params.fonts.code | default .Site.Data.themedefaults.fonts.code }};
     font-size: 0.98rem;
     background-color: #f7f7f7;
 }
@@ -178,6 +186,7 @@ a:hover {
 }
 
 .content .groupby {
+    font-family: {{ .Site.Params.fonts.meta | default .Site.Data.themedefaults.fonts.meta }};
     list-style: none;
     margin-top: 1em;
 }
