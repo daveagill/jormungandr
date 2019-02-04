@@ -208,6 +208,11 @@ a:hover {
 }
 
 /* Partial: Footer */
+.footer span {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
 .footer a {
     font-size: 14px;
     opacity: 0.6;
@@ -235,11 +240,6 @@ a:hover {
 .footer a .icon {
     width: 16px;
     height: 16px;
-}
-
-.footer span.title {
-    font-size: 14px;
-    color: #666;
 }
 
 /* Small devices (landscape phones, less than 768px) */

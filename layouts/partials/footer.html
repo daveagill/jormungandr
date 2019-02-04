@@ -2,12 +2,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-5">
-                {{ if .Site.Params.copyright }}
+                {{ if .Site.Copyright }}
                     <div class="mx-0 mx-md-4 mb-2 text-center text-md-left">
                         {{ if .Site.Params.copyrightUrl }}
-                            <a href="{{ .Site.Params.copyrightUrl }}">{{ .Site.Params.copyright }}</a>
+                            <a href="{{ .Site.Params.copyrightUrl }}">{{ .Site.Copyright }}</a>
                         {{ else }}
-                            <a href="{{ .Site.BaseURL }}license">{{ .Site.Params.copyright }}</a>
+                            <span>{{ .Site.Copyright }}</span>
                         {{ end }}
                     </div>
                 {{ end }}
