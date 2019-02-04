@@ -125,10 +125,6 @@ a:hover {
     margin-right: 21px;
 }
 
-.content .markdown p + p {
-  text-indent: 1.5rem;
-}
-
 .content .markdown code,
 .content .markdown pre {
     font-family: {{ .Site.Params.fonts.code | default .Site.Data.themedefaults.fonts.code }};
@@ -170,10 +166,6 @@ a:hover {
 
 .content .markdown blockquote p:last-child {
     margin-bottom: 0;
-}
-
-.content .markdown figure {
-    background: #fff;
 }
 
 .content .see-more {
