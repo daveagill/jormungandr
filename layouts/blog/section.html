@@ -17,7 +17,7 @@
                                 {{ range $taxonomyName, $taxonomy := .Site.Taxonomies }}
                                     {{ if $taxonomy }}
                                         {{ $taxonomyHref := path.Join ("/" | relLangURL) ($taxonomyName | urlize) }}
-                                        <h8 class="text-capitalize"><a href="{{ $taxonomyHref }}">{{ $taxonomyName }}</a></h8>
+                                        <h8 class="text-capitalize"><a href="{{ $taxonomyHref }}">{{ $taxonomyName }}:</a></h8>
                                         <p class="mb-3 ml-1">
                                             {{ range where $taxonomy.ByCount ".Count" ">" (.Site.Params.taxonomies.minUsage | default 0) }}
                                                 <a href="{{ path.Join $taxonomyHref (.Term | urlize) }}" class="tax-term badge badge-info">
