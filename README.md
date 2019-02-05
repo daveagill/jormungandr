@@ -32,7 +32,7 @@ Originally forked from the [alaGeek](https://github.com/gkmngrgn/hugo-alageek-th
 
 ## Quick Start
 
-## Step 1 -- Install the theme
+### Step 1 -- Install the theme
 
 If you manage your Hugo site using Git then you can add the theme as a submodule.
 
