@@ -8,7 +8,7 @@
                     <div class="markdown">
                         <h1>{{ i18n "posts_about" . }}</h1>
                         <ul>
-                            {{ range .Data.Pages.ByPublishDate }}
+                            {{ range .Data.Pages.ByPublishDate.Reverse }}
                                 {{ partial "list" . }}
                             {{ end }}
                         </ul>
