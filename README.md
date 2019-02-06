@@ -11,7 +11,7 @@ Originally forked from the [alaGeek](https://github.com/gkmngrgn/hugo-alageek-th
 * Syntax highlighting with `hightlight.js`.
 * LaTeX support with `MathJax`.
 * Twitter cards.
-* `planned:` Disqus comments system.
+* `new:` Disqus comments system.
 * `new:` Thumbnail images using a Hugo shortcode.
 * Internationalization.
 

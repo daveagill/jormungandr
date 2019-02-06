@@ -207,6 +207,11 @@ a:hover {
     height: 16px;
 }
 
+/* Partial: Comments */
+#disqus_thread {
+    margin-top: 2rem;
+}
+
 /* Partial: Footer */
 .footer span {
     font-size: 14px;
