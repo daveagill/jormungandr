@@ -3,6 +3,38 @@ body {
     font-family: {{ .Site.Params.fonts.body | default .Site.Data.themedefaults.fonts.body }};
 }
 
+#container {
+    width: 100%;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    html {
+        font-size: 0.8rem;
+    }
+
+    #container {
+        max-width: 540px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #container {
+        max-width: 768px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #container {
+        max-width: 1000px;
+    }
+}
+
 a {
     color: #428bca;
     transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
@@ -25,41 +57,41 @@ a:hover {
 }
 
 /* Partial: Header */
-.header a:hover {
+#header a:hover {
     text-decoration: none;
 }
 
-.header .logo {
-    max-height: 120px;
+#header .logo {
+    max-height: 8rem;
     border: 3px solid rgb(0,0,0,0.08);
     {{ if .Site.Params.logoAsCircle }}
         border-radius: 50%;
     {{ end }}
 }
 
-.header h1.name {
+#header h1.name {
     font-family: {{ .Site.Params.fonts.siteTitle | default .Site.Data.themedefaults.fonts.siteTitle }};
     color: #333333;
     font-size: 2.3rem;
     letter-spacing: 0.1rem;
 }
 
-.header ul.nav li a {
+#header ul.nav li a {
     font-family: {{ .Site.Params.fonts.menu | default .Site.Data.themedefaults.fonts.menu }};
     font-size: 18px;
     padding: 3px 5px 0 5px;
 }
 
-.header ul.nav li:first-child a {
+#header ul.nav li:first-child a {
     padding-left: 2px;
 }
 
-.header ul.nav li:last-child a {
+#header ul.nav li:last-child a {
     padding-right: 2px;
 }
 
 /* Partial: Content */
-.content .page-heading {
+#content .page-heading {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.005rem;
@@ -70,24 +102,24 @@ a:hover {
     margin-bottom: 16px;
 }
 
-.content .meta {
+#content .meta {
     font-family: {{ .Site.Params.fonts.meta | default .Site.Data.themedefaults.fonts.meta }};
     font-size: 14px;
     color: #666666;
 }
 
-.content .meta a {
+#content .meta a {
     text-decoration: none;
 }
 
-.content .middot:before {
+#content .middot:before {
     font-size: 6px;
     margin: 0 6px;
     vertical-align: middle;
     content: "•";
 }
 
-.content .tags ul li {
+#content .tags ul li {
     transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
     -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
     -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
@@ -95,54 +127,38 @@ a:hover {
     -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
 }
 
-.content .tags ul li:hover {
+#content .tags ul li:hover {
     opacity: 0.7;
 }
 
-.content .tags ul li a {
+#content .tags ul li a {
     color: #666666;
 }
 
-.content .markdown {
+#content .markdown {
     font-size: 1.1em;
     line-height: 1.75em;
     color: #313537;
 }
 
-.content twitterwidget {
+#content twitterwidget {
     margin: auto;
 }
 
-.content .meta,
-.content .markdown > h1,
-.content .markdown > h2,
-.content .markdown > h3,
-.content .markdown > h4,
-.content .markdown > h5,
-.content .markdown > h6,
-.content .markdown > p,
-.content .markdown > ul,
-.content .markdown > ol,
-.content .markdown > dl,
-.content .markdown > blockquote {
-    margin-left: 21px;
-    margin-right: 21px;
-}
-
-.content .markdown code,
-.content .markdown pre {
+#content .markdown code,
+#content .markdown pre {
     font-family: {{ .Site.Params.fonts.code | default .Site.Data.themedefaults.fonts.code }};
     font-size: 0.98rem;
     background-color: #f7f7f7;
 }
 
-.content .markdown code {
+#content .markdown code {
     /* enclosed by single backtick (`) */
     padding: 0.15em 0.5em;
     border-radius: 2px;
 }
 
-.content .markdown pre {
+#content .markdown pre {
     /* Hugo specific: consider using the 'highlight' shortcode */
     display: block;
     margin-top: 1rem;
@@ -154,13 +170,13 @@ a:hover {
     word-wrap: break-word;
 }
 
-.content .markdown pre code {
+#content .markdown pre code {
     /* enclosed by 4 backticks (````) */
     padding: 0;
     font-size: 0.9rem;
 }
 
-.content .markdown blockquote {
+#content .markdown blockquote {
     padding: 0.5rem 0.5rem;
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
@@ -168,26 +184,26 @@ a:hover {
     border-left: 0.25rem solid #e5e5e5;
 }
 
-.content .markdown blockquote p:last-child {
+#content .markdown blockquote p:last-child {
     margin-bottom: 0;
 }
 
-.content .see-more {
+#content .see-more {
     font-size: 0.9em;
     color: #313537;
 }
 
-.content .see-more:hover {
+#content .see-more:hover {
     color: #666;
 }
 
-.content .groupby {
+#content .groupby {
     font-family: {{ .Site.Params.fonts.meta | default .Site.Data.themedefaults.fonts.meta }};
     list-style: none;
     margin-top: 1em;
 }
 
-.content .post-item {
+#content .post-item {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -195,14 +211,14 @@ a:hover {
     display: flex;
 }
 
-.content .post-item .meta {
+#content .post-item .meta {
     color: #666666;
     display: block;
     font-size: 14px;
     min-width: 100px;
 }
 
-.content .navigation .icon {
+#content .navigation .icon {
     width: 16px;
     height: 16px;
 }
@@ -213,12 +229,12 @@ a:hover {
 }
 
 /* Partial: Footer */
-.footer span {
+#footer span {
     font-size: 14px;
     opacity: 0.6;
 }
 
-.footer a {
+#footer a {
     font-size: 14px;
     opacity: 0.6;
     display: inline-block;
@@ -230,42 +246,24 @@ a:hover {
     text-decoration: none;
 }
 
-.footer a:first-child {
+#footer a:first-child {
     margin-left: 0;
 }
 
-.footer a:last-child {
+#footer a:last-child {
     margin-right: 0;
 }
 
-.footer a:hover {
+#footer a:hover {
     opacity: 0.8;
 }
 
-.footer a .icon {
+#footer a .icon {
     width: 16px;
     height: 16px;
 }
 
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {
-    html {
-        font-size: 0.8rem;
-    }
-
-    .content .meta,
-    .content .markdown > h1,
-    .content .markdown > h2,
-    .content .markdown > h3,
-    .content .markdown > h4,
-    .content .markdown > h5,
-    .content .markdown > h6,
-    .content .markdown > p,
-    .content .markdown > ul,
-    .content .markdown > ol,
-    .content .markdown > dl,
-    .content .markdown > blockquote {
-        margin-left: 0;
-        margin-right: 0;
-    }
+#header a .icon {
+    width: 16px;
+    height: 16px;
 }
