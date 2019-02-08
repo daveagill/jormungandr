@@ -13,18 +13,20 @@ theme = "jormungandr"
     logofile = "img/logo.jpg"
     logoAsCircle = true
     latestpostcount = 5
-    github = "daveagill/jormungandr"
-    
+
     highlightjs = true
     posts_navigation = true
+
+    [params.social]
+        github = "daveagill/jormungandr"
 
     [params.taxonomies]
         showOnBlogSection = true
         minUsage = 0
 
-[[params.best_posts]]
-    title = "Migrate to Hugo from Jekyll"
-    url = "/blog/migrate-from-jekyll/"
+    [[params.best_posts]]
+        title = "Migrate to Hugo from Jekyll"
+        url = "/blog/migrate-from-jekyll/"
 
 [[menu.primary]]
     identifier = "blog"

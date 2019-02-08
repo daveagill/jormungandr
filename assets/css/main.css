@@ -56,6 +56,26 @@ a:hover {
     font-family: {{ .Site.Params.fonts.taxonomyTerm | default .Site.Data.themedefaults.fonts.taxonomyTerm }};
 }
 
+/* Partial: Social */
+.social a, .social span {
+    opacity: 0.6;
+    transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    text-decoration: none;
+}
+
+.social a:hover {
+    opacity: 0.8;
+}
+
+.social .icon {
+    width: 16px;
+    height: 16px;
+}
+
 /* Partial: Header */
 #header a:hover {
     text-decoration: none;
@@ -229,41 +249,6 @@ a:hover {
 }
 
 /* Partial: Footer */
-#footer span {
+#footer {
     font-size: 14px;
-    opacity: 0.6;
-}
-
-#footer a {
-    font-size: 14px;
-    opacity: 0.6;
-    display: inline-block;
-    transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    text-decoration: none;
-}
-
-#footer a:first-child {
-    margin-left: 0;
-}
-
-#footer a:last-child {
-    margin-right: 0;
-}
-
-#footer a:hover {
-    opacity: 0.8;
-}
-
-#footer a .icon {
-    width: 16px;
-    height: 16px;
-}
-
-#header a .icon {
-    width: 16px;
-    height: 16px;
 }

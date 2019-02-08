@@ -1,4 +1,4 @@
-<div id="footer" class="my-4">
+<div id="footer" class="social my-4">
     <div class="row">
         {{ if .Site.Copyright }}
             <div class="col-md-6 order-md-first text-md-left mt-md-0   col-12 order-last text-center mt-2">
@@ -9,69 +9,10 @@
                 {{ end }}
             </div>
         {{ end }}
-        <div class="col-md-6 order-md-last text-md-right   col-12 order-md-first text-center">
-            {{ if .Site.Params._500px }}
-                <a href="https://500px.com/{{ .Site.Params._500px }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                    <img class="icon" src="{{ .Site.BaseURL }}img/500px.svg" alt="500px" />
-                </a>
-            {{ end }}
-
-            {{ if .Site.Params.gitlab }}
-                <a href="https://gitlab.com/{{ .Site.Params.gitlab }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                    <img class="icon" src="{{ .Site.BaseURL }}img/gitlab.svg" alt="gitlab" />
-                </a>
-            {{ end }}
-
-            {{ if .Site.Params.facebook }}
-                <a href="https://facebook.com/{{ .Site.Params.facebook }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                    <img class="icon" src="{{ .Site.BaseURL }}img/facebook.svg" alt="facebook" />
-                </a>
-            {{ end }}
-
-            {{ if .Site.Params.github }}
-                <a href="https://github.com/{{ .Site.Params.github }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                    <img class="icon" src="{{ .Site.BaseURL }}img/github.svg" alt="github" />
-                </a>
-            {{ end }}
-
-            {{ if .Site.Params.twitter }}
-                <a href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                    <img class="icon" src="{{ .Site.BaseURL }}img/twitter.svg" alt="twitter" />
-                </a>
-            {{ end }}
-
-            {{ if .Site.Params.mastodon_url }}
-                <a rel="me" href="{{ .Site.Params.mastodon_url }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                    <img class="icon" src="{{ .Site.BaseURL }}img/mastodon.svg" alt="mastodon" />
-                </a>
-            {{ end }}
-
-            {{ if .Site.Params.linkedin }}
-                <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                    <img class="icon" src="{{ .Site.BaseURL }}img/linkedin.svg" alt="linkedin" />
-                </a>
-            {{ end }}
-
-            {{ if .Site.Params.email }}
-                <a href="mailto:{{ .Site.Params.email }}" class="mx-1 ml-md-2 mr-md-0">
-                    <img class="icon" src="{{ .Site.BaseURL }}img/email.svg" alt="email" />
-                </a>
-            {{ end }}
-
-            {{ if .Site.RSSLink }}
-                <a href="{{ .Site.RSSLink }}" class="mx-1 ml-md-2 mr-md-0">
-                    <img class="icon" src="{{ .Site.BaseURL }}img/rss.svg" alt="rss" />
-                </a>
-            {{ end }}
-
-            {{ if .IsTranslated }}
-                <br />
-                {{ range .Translations }}
-                    <a href="{{ .Permalink }}" class="mx-1 my-2 ml-md-2 mr-md-0">
-                        <strong>{{ upper .Language.LanguageName }}</strong>
-                    </a>
-                {{ end }}
-            {{ end }}
-        </div>
+        {{ if .Site.Params.social.enableInFooter | default true }}
+            <div class="col-md-6 order-md-last text-md-right   col-12 order-md-first text-center">
+                {{ partial "social" . }}
+            </div>
+        {{ end }}
     </div>
 </div>
