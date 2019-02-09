@@ -6,8 +6,6 @@ page_not_found_description:
   other: "Aradığınız sayfa bulunmuyor."
 page_not_found_link:
   other: "Ana sayfaya git"
-pinned:
-  other: "Sabitlenmiş"
 posts_about:
   other: "{{.Title}} ile ilgili yazılar"
 reading_time:

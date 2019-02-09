@@ -6,8 +6,6 @@ page_not_found_description:
   other: "The page you were looking for does not exist."
 page_not_found_link:
   other: "Visit the home page"
-pinned:
-  other: "Pinned"
 posts_about:
   other: "Posts about {{ .Title }}"
 reading_time:

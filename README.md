@@ -7,7 +7,7 @@ Originally forked from the [alaGeek](https://github.com/gkmngrgn/hugo-alageek-th
 ## Key Features
 
 * Minimalist, single-column, responsive design with beautiful typography.
-* Display N number of latest posts and pinned posts.
+* Display N number of latest posts.
 * Syntax highlighting with `hightlight.js`.
 * LaTeX support with `MathJax`.
 * Twitter cards.
