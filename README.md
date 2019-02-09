@@ -2,7 +2,7 @@
 
 **Jörmungandr** (pronounced: _yor-mun-gan-der_) is a minimalist Hugo theme suited for blogging and personal websites.
 
-Originally forked from the [alaGeek](https://github.com/gkmngrgn/hugo-alageek-theme) theme (which is itself derived from the [Cocoa Enhaced](https://github.com/mtn/cocoa-eh-hugo-theme) theme) and now includes several additional features and style changes.
+Originally forked from the [alaGeek](https://github.com/gkmngrgn/hugo-alageek-theme) theme (which is itself derived from the [Cocoa Enhanced](https://github.com/mtn/cocoa-eh-hugo-theme) theme) and now includes several additional features and style changes.
 
 ## Key Features
 
@@ -63,9 +63,8 @@ Look at the [example site](https://github.com/daveagill/jormungandr/tree/master/
 
 ## Dependency versions
 
-* bootstrap: 4.1.3
+* bootstrap: 4.2.1
 * highlightjs: 9.12.0
-* jquery-slim: 3.3.1
 * mathjax: 2.7.5
 * progressively: 1.2.5
 * webfont: 1.6.28
