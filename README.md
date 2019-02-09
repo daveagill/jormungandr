@@ -7,12 +7,12 @@ Originally forked from the [alaGeek](https://github.com/gkmngrgn/hugo-alageek-th
 ## Key Features
 
 * Minimalist, single-column, responsive design with beautiful typography.
-* Display N number of latest posts.
 * Syntax highlighting with `hightlight.js`.
 * LaTeX support with `MathJax`.
 * Twitter cards.
 * `new:` Disqus comments system.
 * `new:` Thumbnail images using a Hugo shortcode.
+* `new:` Display most-recent posts on any page using a Hugo shortcode.
 * Internationalization.
 
 ## Easily Customized (via config.toml)

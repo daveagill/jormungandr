@@ -1,0 +1,25 @@
+{{ $postCount := .Get "count" | default (.Get 0) }}
+
+{{ if $postCount }}
+    {{ $blogPosts := where .Site.Pages "Section" "blog" }}
+    {{ $numPosts := len $blogPosts }}
+
+    {{ if gt $numPosts 0 }}
+        <div class="recent-posts">
+                <ul>
+                    {{ range (first $postCount $blogPosts).GroupByDate "Jan, 2006" "desc" }}
+                        <li class="groupby">{{ .Key }}</li>
+                        {{ range sort .Pages "Date" "desc" }}
+                            {{ partial "list" . }}
+                        {{ end }}
+                    {{ end }}
+                </ul>
+
+                {{ if gt $numPosts $postCount }}
+                    <a href="/blog/" class="see-more">{{ i18n "see-more" }}</a>
+                {{ end }}
+        </div>
+    {{ end }}
+{{ else }}
+    {{ errorf "Shortcode 'recentposts'.\nError at: %s\nMissing required 'count' argument." .Position  }}
+{{ end }}

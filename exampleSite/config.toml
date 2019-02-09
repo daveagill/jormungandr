@@ -12,7 +12,6 @@ theme = "jormungandr"
     faviconfile = "img/favicon.ico"
     logofile = "img/logo.jpg"
     logoAsCircle = true
-    latestpostcount = 5
 
     highlightjs = true
     posts_navigation = true
@@ -23,10 +22,6 @@ theme = "jormungandr"
     [params.taxonomies]
         showOnBlogSection = true
         minUsage = 0
-
-    [[params.best_posts]]
-        title = "Migrate to Hugo from Jekyll"
-        url = "/blog/migrate-from-jekyll/"
 
 [[menu.primary]]
     identifier = "blog"

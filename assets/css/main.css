@@ -208,15 +208,6 @@ a:hover {
     margin-bottom: 0;
 }
 
-#content .see-more {
-    font-size: 0.9em;
-    color: #313537;
-}
-
-#content .see-more:hover {
-    color: #666;
-}
-
 #content .groupby {
     font-family: {{ .Site.Params.fonts.meta | default .Site.Data.themedefaults.fonts.meta }};
     list-style: none;
@@ -251,4 +242,24 @@ a:hover {
 /* Partial: Footer */
 #footer {
     font-size: 14px;
+}
+
+/* Shortcode: recentposts */
+.recent-posts {
+    font-size: 1rem;
+}
+
+.recent-posts ul {
+    padding: 0;
+    padding-left: 1em;
+}
+
+.recent-posts .see-more {
+    font-size: 0.9em;
+    color: #313537;
+    opacity: 0.8;
+}
+
+.recent-posts .see-more:hover {
+    opacity: 1;
 }

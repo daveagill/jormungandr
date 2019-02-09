@@ -23,4 +23,6 @@ date = "2019-01-01"
 <span class="badge badge-success">MathJax</span>
 <span class="badge badge-success">Twitter cards</span>
 
+{{< recentposts 5 >}}
+
 <small>(Snake photo by David Clode from Unsplash)</small>
