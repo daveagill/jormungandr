@@ -1,12 +1,6 @@
 {{ define "main" }}
-    <h1>{{ .Title }}:</h1>
-
-    <p class="h4">
-        {{ range $key, $value := .Data.Terms.Alphabetical }}
-            <a href="{{ $value.Name | urlize }}" class="tax-term badge badge-info">
-                {{ $value.Name }}
-                <span class="badge badge-light">{{ $value.WeightedPages.Count }}</span>
-            </a>
-        {{ end }}
-    </p>
+    <div class="taxonomy-terms">
+        <h1>{{ .Title }}:</h1>
+        {{ partial "termslist" (dict "terms" (.Data.Terms.ByCount) ) }}
+    </div>
 {{ end }}

@@ -10,31 +10,6 @@ body {
     padding-right: 15px;
 }
 
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {
-    html {
-        font-size: 0.8rem;
-    }
-
-    #container {
-        max-width: 540px;
-    }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    #container {
-        max-width: 768px;
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    #container {
-        max-width: 1000px;
-    }
-}
-
 a {
     color: #428bca;
     transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
@@ -48,12 +23,67 @@ a:hover {
     color: #2a6496;
 }
 
+/* Template: blog/single */
 .post-heading {
     font-family: {{ .Site.Params.fonts.postHeading | default .Site.Data.themedefaults.fonts.postHeading }};
 }
 
-.tax-term {
+/* Template: blog/section */
+.all-used-taxonomies {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+    list-style: none;
+    padding: 0;
+}
+
+/* Template: terms */
+.taxonomy-terms {
+    font-size: 1.5rem;
+}
+
+/* Partial: termslist */
+.terms-list {
     font-family: {{ .Site.Params.fonts.taxonomyTerm | default .Site.Data.themedefaults.fonts.taxonomyTerm }};
+    text-transform: capitalize;
+    vertical-align: middle;
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.terms-list li {
+    margin-left: 0.25em;
+}
+
+.terms-list .pill,
+.terms-list .pill span {
+    display: inline-block;
+    font-size: 0.75em;
+    white-space: nowrap;
+    line-height: 1;
+    vertical-align: middle;
+    padding: 0.25em 0.4em;
+    border-radius: 0.25rem;
+}
+
+.terms-list .pill {
+    background-color: #6d98b7;
+    color: {{ .Site.Params.colors.body | default .Site.Data.themedefaults.colors.body }};
+}
+
+.terms-list .pill span {
+    background-color: {{ .Site.Params.colors.body | default .Site.Data.themedefaults.colors.body }};
+    color: #212529;
+}
+
+.terms-list a.pill:hover {
+    text-decoration: none;
+    color: {{ .Site.Params.colors.body | default .Site.Data.themedefaults.colors.body }};;
+    opacity: 0.8;
 }
 
 /* Partial: Social */
@@ -262,4 +292,35 @@ a:hover {
 
 .recent-posts .see-more:hover {
     opacity: 1;
+}
+
+
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    html {
+        font-size: 0.8rem;
+    }
+
+    #container {
+        max-width: 540px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #container {
+        max-width: 768px;
+    }
+
+    .all-used-taxonomies {
+        margin-bottom: 3rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #container {
+        max-width: 1000px;
+    }
 }
