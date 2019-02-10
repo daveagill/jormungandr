@@ -1,14 +1,12 @@
 {{ define "main" }}
-    <div class="markdown">
-        <h1 class="mx-0 mx-md-4">{{ .Title }}:</h1>
+    <h1>{{ .Title }}:</h1>
 
-        <p class="h4">
-            {{ range $key, $value := .Data.Terms.Alphabetical }}
-                <a href="{{ $value.Name | urlize }}" class="tax-term badge badge-info">
-                    {{ $value.Name }}
-                    <span class="badge badge-light">{{ $value.WeightedPages.Count }}</span>
-                </a>
-            {{ end }}
-        </p>
-    </div>
+    <p class="h4">
+        {{ range $key, $value := .Data.Terms.Alphabetical }}
+            <a href="{{ $value.Name | urlize }}" class="tax-term badge badge-info">
+                {{ $value.Name }}
+                <span class="badge badge-light">{{ $value.WeightedPages.Count }}</span>
+            </a>
+        {{ end }}
+    </p>
 {{ end }}

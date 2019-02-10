@@ -3,14 +3,12 @@
         {{ partial "content" . }}
     </div>
 
-    <div class="mx-0 mx-md-4 posts">
-        <h1>{{ i18n "sections" }}</h1>
-        <ul>
-            {{ range sort .Pages "Title" "asc" }}
-                <li>
-                    <a href="{{ .Permalink }}"><span>{{ .Title }}</span></a>
-                </li>
-            {{ end }}
-        </ul>
-    </div>
+    <h1>{{ i18n "sections" }}</h1>
+    <ul>
+        {{ range sort .Pages "Title" "asc" }}
+            <li>
+                <a href="{{ .Permalink }}"><span>{{ .Title }}</span></a>
+            </li>
+        {{ end }}
+    </ul>
 {{ end }}
