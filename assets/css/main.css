@@ -124,7 +124,7 @@ a:hover {
 
 #content .meta {
     font-family: {{ .Site.Params.fonts.meta | default .Site.Data.themedefaults.fonts.meta }};
-    font-size: 14px;
+    font-size: 0.88em;
     color: #666666;
 }
 
@@ -208,27 +208,6 @@ a:hover {
     margin-bottom: 0;
 }
 
-#content .groupby {
-    font-family: {{ .Site.Params.fonts.meta | default .Site.Data.themedefaults.fonts.meta }};
-    list-style: none;
-    margin-top: 1em;
-}
-
-#content .post-item {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: -ms-flex;
-    display: flex;
-}
-
-#content .post-item .meta {
-    color: #666666;
-    display: block;
-    font-size: 14px;
-    min-width: 100px;
-}
-
 #content .navigation .icon {
     width: 16px;
     height: 16px;
@@ -244,13 +223,34 @@ a:hover {
     font-size: 14px;
 }
 
+/* Partial: postlist */
+.post-list {
+    padding: 0;
+}
+
+.post-list .date-group {
+    font-family: {{ .Site.Params.fonts.meta | default .Site.Data.themedefaults.fonts.meta }};
+    list-style: none;
+    margin-top: 1em;
+}
+
+.post-list .post-item {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    padding-left: 1em;
+}
+
+.post-list .post-item .meta {
+    padding-right: 1.5em;
+}
+
 /* Shortcode: recentposts */
 .recent-posts {
     font-size: 1rem;
-}
-
-.recent-posts ul {
-    padding: 0;
+    line-height: 1.5;
     padding-left: 1em;
 }
 

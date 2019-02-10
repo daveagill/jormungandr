@@ -1,0 +1,11 @@
+<ul class="post-list">
+    {{ range .GroupByDate "Jan, 2006" "desc" }}
+        <li class="date-group">{{ .Key }}</li>
+        {{ range sort .Pages "Date" "desc" }}
+            <li class="post-item">
+                <span class="meta">{{ .Date.Format  "Jan 02, 2006" }}</span>
+                <a href="{{ .Permalink }}"><span>{{ .Title }}</span></a>
+            </li>
+        {{ end }}
+    {{ end }}
+</ul>

@@ -25,13 +25,6 @@
             </div>
         {{ end }}
 
-        <ul class="list-unstyled">
-            {{ range .Data.Pages.GroupByDate "Jan, 2006" "desc"}}
-                <li class="groupby">{{ .Key }}</li>
-                {{ range sort .Pages "Date" "desc" }}
-                    {{ partial "list" . }}
-                {{ end }}
-            {{ end }}
-        </ul>
+        {{ partial "postlist" .Pages }}
     </div>
 {{ end }}

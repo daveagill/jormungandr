@@ -6,14 +6,7 @@
 
     {{ if gt $numPosts 0 }}
         <div class="recent-posts">
-                <ul>
-                    {{ range (first $postCount $blogPosts).GroupByDate "Jan, 2006" "desc" }}
-                        <li class="groupby">{{ .Key }}</li>
-                        {{ range sort .Pages "Date" "desc" }}
-                            {{ partial "list" . }}
-                        {{ end }}
-                    {{ end }}
-                </ul>
+                {{ partial "postlist" (first $postCount $blogPosts) }}
 
                 {{ if gt $numPosts $postCount }}
                     <a href="/blog/" class="see-more">{{ i18n "see-more" }}</a>
