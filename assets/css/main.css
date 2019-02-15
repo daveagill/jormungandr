@@ -78,6 +78,24 @@ a:hover {
     content: none;
 }
 
+.posts-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.posts-navigation .next:after {
+    content: "＞";
+    margin-left: 0.25em;
+    display: inline-block;
+}
+
+.posts-navigation .prev:before {
+    content: "＜";
+    margin-right: 0.25em;
+    display: inline-block;
+}
+
 /* Template: blog/section */
 .all-used-taxonomies {
     margin-top: 1.5rem;
@@ -242,11 +260,6 @@ a:hover {
 
 #content .markdown blockquote p:last-child {
     margin-bottom: 0;
-}
-
-#content .navigation .icon {
-    width: 16px;
-    height: 16px;
 }
 
 /* Partial: Comments */

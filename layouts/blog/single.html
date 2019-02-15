@@ -24,26 +24,14 @@
         {{ partial "content" . }}
     </div>
 
-    {{ if .Site.Params.posts_navigation }}
-        <div class="navigation">
-            <div class="row">
-                <div class="col">
-                    {{ if .PrevInSection }}
-                        <div class="mt-4 text-left">
-                            <img class="icon" src="/img/back.svg" alt="back" />
-                            <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a>
-                        </div>
-                    {{ end }}
-                </div>
-                <div class="col">
-                    {{ if .NextInSection }}
-                        <div class="mt-4 text-right">
-                            <a href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}</a>
-                            <img class="icon" src="/img/next.svg" alt="next" />
-                        </div>
-                    {{ end }}
-                </div>
-            </div>
+    {{ if (.Site.Params.posts_navigation | default true) }}
+        <div class="posts-navigation">
+            {{ if .PrevInSection }}
+                <a class="prev" href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a>
+            {{ end }}
+            {{ if .NextInSection }}
+                <a class="next" href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a>
+            {{ end }}
         </div>
     {{ end }}
     
