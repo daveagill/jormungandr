@@ -10,8 +10,12 @@ body {
     padding-right: 15px;
 }
 
+::selection {
+    background-color: #b6ecd7;
+}
+
 a {
-    color: #428bca;
+    color: #0eb573;
     transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
     -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
     -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
@@ -20,7 +24,12 @@ a {
 }
 
 a:hover {
-    color: #2a6496;
+    color: #289067;
+}
+
+mark {
+    background-color: #e3e4b852;
+    padding: 0.2em;
 }
 
 .meta {
