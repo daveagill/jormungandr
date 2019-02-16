@@ -184,8 +184,22 @@ mark {
 }
 
 /* Partial: Header */
+#header {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+}
+
 #header a:hover {
     text-decoration: none;
+}
+
+#header .main-header-section {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2rem;
 }
 
 #header .logo {
@@ -196,25 +210,25 @@ mark {
     {{ end }}
 }
 
-#header h1.name {
+#header h1 {
     font-family: {{ .Site.Params.fonts.siteTitle | default .Site.Data.themedefaults.fonts.siteTitle }};
+    font-weight: bold;
     color: #333333;
     font-size: 2.3rem;
     letter-spacing: 0.1rem;
 }
 
-#header ul.nav li a {
+#header nav ul {
     font-family: {{ .Site.Params.fonts.menu | default .Site.Data.themedefaults.fonts.menu }};
-    font-size: 18px;
-    padding: 3px 5px 0 5px;
+    font-size: 1.1rem;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-#header ul.nav li:first-child a {
-    padding-left: 2px;
-}
-
-#header ul.nav li:last-child a {
-    padding-right: 2px;
+#header nav li {
+    margin-right: 0.8em;
 }
 
 /* Partial: Content */
@@ -332,6 +346,11 @@ mark {
 
     #container {
         max-width: 540px;
+    }
+
+    #header {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .frontmatter {

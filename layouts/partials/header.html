@@ -1,46 +1,35 @@
-<div id="header" class="my-4 my-md-5">
-    <div class="row">
-        {{ if .Site.Params.logofile }}
-            <a href="{{ .Site.BaseURL }}" class="col-auto">
-                <img class="logo" src="{{ .Site.Params.logofile | absURL }}" alt="logo">
+<div id="header">
+
+    {{ if .Site.Params.logofile }}
+        <a href="{{ .Site.BaseURL }}">
+            <img class="logo" src="{{ .Site.Params.logofile | absURL }}" alt="logo">
+        </a>
+    {{ end }}
+
+    <div class="main-header-section">
+        <div>
+            <a href="{{ .Site.BaseURL }}">
+                <h1>{{ .Site.Title }}</h1>
             </a>
-        {{ end }}
-        <div class="col align-self-center">
-            <div class="row justify-content-between">
-                <a href="{{ .Site.BaseURL }}" class="col-auto">
-                    <h1 class="font-weight-bold name">{{ .Site.Title }}</h1>
-                </a>
-                {{ if .Site.Params.social.enableInHeader | default true }}
-                    <div class="col-auto social">
-                            {{ partial "social" . }}
-                    </div>
-                {{ end }}
-            </div>
 
-            <ul class="nav">
-                {{ range .Site.Menus.main.ByWeight }}
-                    <li class="nav-item">
-                        <a class="nav-link{{ if .Identifier }} text-{{ .Identifier }}{{ end }}" href="{{ .URL }}">
-                            {{ .Pre }}
-                            {{ .Name }}
-                        </a>
-                    </li>
-                {{ end }}
-
-                {{ if .IsTranslated }}
-                    <li class="ml-3">
-                        <ul class="nav nav-languages">
-                            {{ range .Translations }}
-                                <li>
-                                    <a class="nav-link" href="{{ .Permalink }}">
-                                        <strong>{{ upper .Language }}</strong>
-                                    </a>
-                                </li>
-                            {{ end }}
-                        </ul>
-                    </li>
-                {{ end }}
-            </ul>
+            <nav>
+                <ul>
+                    {{ range .Site.Menus.main.ByWeight }}
+                        <li>
+                            <a  {{ with .Identifier }}class="{{ . }}"{{ end }}
+                                href="{{ .URL }}"
+                                title="{{ .Name }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </nav>
         </div>
+
+        {{ if .Site.Params.social.enableInHeader | default true }}
+            <div class="social">
+                    {{ partial "social" . }}
+            </div>
+        {{ end }}
     </div>
+
 </div>
