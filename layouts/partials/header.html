@@ -17,8 +17,8 @@
                 {{ end }}
             </div>
 
-            <ul class="nav nav-primary">
-                {{ range .Site.Menus.primary.ByWeight }}
+            <ul class="nav">
+                {{ range .Site.Menus.main.ByWeight }}
                     <li class="nav-item">
                         <a class="nav-link{{ if .Identifier }} text-{{ .Identifier }}{{ end }}" href="{{ .URL }}">
                             {{ .Pre }}
@@ -38,17 +38,6 @@
                                 </li>
                             {{ end }}
                         </ul>
-                    </li>
-                {{ end }}
-            </ul>
-
-            <ul class="nav nav-secondary">
-                {{ range .Site.Menus.secondary.ByWeight }}
-                    <li class="nav-item">
-                        <a class="text-uppercase font-weight-bold nav-link{{ if .Identifier }} text-{{ .Identifier }}{{ end }}" href="{{ .URL }}">
-                            {{ .Pre }}
-                            {{ .Name }}
-                        </a>
                     </li>
                 {{ end }}
             </ul>

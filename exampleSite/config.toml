@@ -23,13 +23,13 @@ theme = "jormungandr"
         showOnBlogSection = true
         minUsage = 0
 
-[[menu.primary]]
+[[menu.main]]
     identifier = "blog"
     name = "Blog"
     url = "/blog/"
     weight = 10
 
-[[menu.primary]]
+[[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
