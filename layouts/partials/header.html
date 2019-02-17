@@ -25,11 +25,12 @@
             </nav>
         </div>
 
-        {{ if .Site.Params.social.enableInHeader | default true }}
-            <div class="social">
-                    {{ partial "social" . }}
-            </div>
-        {{ end }}
+        <div>
+            {{ if .Site.Params.social.enableInHeader | default true }}
+                {{ partial "social" . }}
+            {{ end }}
+            {{ partial "translations" . }}
+        </div>
     </div>
 
 </div>

@@ -167,7 +167,11 @@ mark {
 }
 
 /* Partial: Social */
-.social a, .social span {
+.social {
+    display: flex;
+}
+
+.social a {
     opacity: 0.5;
     transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
     -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
@@ -181,9 +185,10 @@ mark {
     opacity: 1;
 }
 
-.social .icon {
-    width: 1.4rem;
-    height: 1.4rem;
+.social img {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 0.5rem;
 }
 
 /* Partial: Header */
@@ -302,9 +307,13 @@ mark {
     display: flex;
     justify-content: space-between;
     align-items: flex-end; /* bottom-align */
-    font-size: 0.8rem;
     margin-top: 3rem;
     margin-bottom: 1rem;
+}
+
+#footer .copyright {
+    font-size: 0.8rem;
+    color: #84888a;
 }
 
 /* Partial: postlist */

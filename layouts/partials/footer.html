@@ -1,10 +1,11 @@
 <div id="footer">
     {{ if .Site.Copyright }}
-        <span>{{ .Site.Copyright }}</span>
+        <span class="copyright">{{ .Site.Copyright }}</span>
     {{ end }}
-    {{ if .Site.Params.social.enableInFooter | default true }}
-        <div class="social">
+    <div>
+        {{ partial "translations" . }}
+        {{ if .Site.Params.social.enableInFooter | default true }}
             {{ partial "social" . }}
-        </div>
-    {{ end }}
+        {{ end }}
+    </div>
 </div>
