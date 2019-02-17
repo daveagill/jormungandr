@@ -1,7 +1,7 @@
 {{ $postCount := .Get "count" | default (.Get 0) }}
 
 {{ if $postCount }}
-    {{ $blogPosts := where .Site.Pages "Section" "blog" }}
+    {{ $blogPosts := where .Site.RegularPages "Section" "blog" }}
     {{ $numPosts := len $blogPosts }}
 
     {{ if gt $numPosts 0 }}
