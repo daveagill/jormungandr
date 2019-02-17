@@ -54,6 +54,11 @@ mark {
     opacity: 0.7;
 }
 
+/* Template: 404 */
+#error404 {
+    text-align: center;
+}
+
 /* Template: blog/single */
 .post-heading {
     font-family: {{ .Site.Params.fonts.postHeading | default .Site.Data.themedefaults.fonts.postHeading }};
