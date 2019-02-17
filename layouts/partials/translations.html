@@ -1,7 +1,7 @@
 {{ if .IsTranslated }}
-    <div class="translations">
-        {{ range .Translations }}
-            <a href="{{ .RelPermalink }}">{{ .Language.LanguageName | default .Language }}</a>
+    <ul class="translations">
+        {{ range .AllTranslations }}
+            <li><a href="{{ .RelPermalink }}">{{ .Language.LanguageName | default .Language }}</a></li>
         {{ end }}
-    </div>
+    </ul>
 {{ end }}

@@ -9,7 +9,7 @@
                 {{ partial "postlist" (first $postCount $blogPosts) }}
 
                 {{ if gt $numPosts $postCount }}
-                    <a href="/blog/" class="see-more">{{ i18n "see-more" }}</a>
+                    <a href="{{ relLangURL "/blog/" }}" class="see-more">{{ i18n "see-more" }}</a>
                 {{ end }}
         </div>
     {{ end }}

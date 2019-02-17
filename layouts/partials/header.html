@@ -1,14 +1,14 @@
 <div id="header">
 
     {{ if .Site.Params.logofile }}
-        <a href="{{ .Site.BaseURL }}">
-            <img class="logo" src="{{ .Site.Params.logofile | absURL }}" alt="logo">
+        <a href="{{ relLangURL "/" }}">
+            <img class="logo" src="{{ .Site.Params.logofile }}" alt="logo">
         </a>
     {{ end }}
 
     <div class="main-header-section">
         <div>
-            <a href="{{ .Site.BaseURL }}">
+            <a href="{{ relLangURL "/" }}">
                 <h1>{{ .Site.Title }}</h1>
             </a>
 
@@ -17,7 +17,7 @@
                     {{ range .Site.Menus.main.ByWeight }}
                         <li>
                             <a  {{ with .Identifier }}class="{{ . }}"{{ end }}
-                                href="{{ .URL }}"
+                                href="{{ relLangURL .URL }}"
                                 title="{{ .Name }}">{{ .Pre }}{{ .Name }}{{ .Post }}</a>
                         </li>
                     {{ end }}
