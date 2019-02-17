@@ -1,18 +1,10 @@
-<div id="footer" class="social my-4">
-    <div class="row">
-        {{ if .Site.Copyright }}
-            <div class="col-md-6 order-md-first text-md-left mt-md-0   col-12 order-last text-center mt-2">
-                {{ if .Site.Params.copyrightUrl }}
-                    <a href="{{ .Site.Params.copyrightUrl }}">{{ .Site.Copyright }}</a>
-                {{ else }}
-                    <span>{{ .Site.Copyright }}</span>
-                {{ end }}
-            </div>
-        {{ end }}
-        {{ if .Site.Params.social.enableInFooter | default true }}
-            <div class="col-md-6 order-md-last text-md-right   col-12 order-md-first text-center">
-                {{ partial "social" . }}
-            </div>
-        {{ end }}
-    </div>
+<div id="footer">
+    {{ if .Site.Copyright }}
+        <span>{{ .Site.Copyright }}</span>
+    {{ end }}
+    {{ if .Site.Params.social.enableInFooter | default true }}
+        <div class="social">
+            {{ partial "social" . }}
+        </div>
+    {{ end }}
 </div>

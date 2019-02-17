@@ -4,7 +4,10 @@ body {
 }
 
 #container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    min-height: 100vh;
     margin: auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -232,6 +235,10 @@ mark {
 }
 
 /* Partial: Content */
+#content {
+    flex-grow: 1;
+}
+
 #content .markdown {
     font-size: 1.1em;
     line-height: 1.75em;
@@ -292,7 +299,12 @@ mark {
 
 /* Partial: Footer */
 #footer {
-    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* bottom-align */
+    font-size: 0.8rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
 }
 
 /* Partial: postlist */
@@ -351,6 +363,11 @@ mark {
     #header {
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
+    }
+
+    #footer {
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
     .frontmatter {
