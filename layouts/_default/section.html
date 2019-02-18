@@ -7,7 +7,7 @@
     <ul>
         {{ range sort .Pages "Title" "asc" }}
             <li>
-                <a href="{{ .Permalink }}"><span>{{ .Title }}</span></a>
+                <a href="{{ .RelPermalink }}"><span>{{ .Title }}</span></a>
             </li>
         {{ end }}
     </ul>
