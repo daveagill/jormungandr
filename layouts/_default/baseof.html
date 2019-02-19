@@ -4,33 +4,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="referrer" content="no-referrer">
+    <meta name="referrer" content="origin">
+    <meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
     <meta name="description" content="{{ .Description | default .Site.Params.description }}">
-    <meta property="og:site_name" content="{{ .Site.Title }}" />
-    <meta property="og:locale" content="nn_NO" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="{{ .Permalink }}" />
-    <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}" />
-    <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.meta_img | default .Site.Params.logofile }}" />
-    <meta property="og:description" content="{{ .Description | default .Site.Params.description }}" />
+    <meta name="copyright" content="{{ .Site.Copyright }}">
 
-    {{ if .Site.Params.twitter }}
-        <meta property="twitter:site" content="@{{ .Site.Params.twitter }}">
-    {{ end }}
-
-    <meta property="twitter:title" content="{{ .Title | default .Site.Title }}" />
-    <meta property="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.meta_img | default .Site.Params.logofile }}" />
-    <meta property="twitter:card" content="summary" />
-    <meta property="twitter:description" content="{{ .Description | default .Site.Params.description }}" />
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ template "_internal/opengraph.html" . }}
 
     {{ if .Site.Params.flattr }}
         <meta name="flattr:id" content="{{ .Site.Params.flattr }}">
     {{ end }}
 
     <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="shortcut icon" href="{{ if .Site.Params.faviconfile }}{{ .Site.Params.faviconfile }}{{ else }}/img/favicon.ico{{ end }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha256-azvvU9xKluwHFJ0Cpgtf0CYzK7zgtOznnzxV4924X1w=" crossorigin="anonymous" />
 
@@ -44,9 +33,6 @@
     {{ if .Site.Params.progressively }}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/progressively/1.2.5/progressively.min.css" integrity="sha256-xbqLYBMsjpuCihs+3Fgp/MFMtPdo2SWKoOjEWOqR4X0=" crossorigin="anonymous" />
     {{ end }}
-
-    <link rel="shortcut icon"
-        href="{{ if .Site.Params.faviconfile }}{{ .Site.Params.faviconfile }}{{ else }}/img/favicon.ico{{ end }}">
 
     {{ if .RSSLink }}
         <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
