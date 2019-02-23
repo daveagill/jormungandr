@@ -1,24 +1,43 @@
 body {
+    margin: 0;
     background-color: {{ .Site.Params.colors.body | default .Site.Data.themedefaults.colors.body }};
     font-family: {{ .Site.Params.fonts.body | default .Site.Data.themedefaults.fonts.body }};
+    line-height: 1.5;
 }
 
-#container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
-    margin: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+*, ::after, ::before {
+    box-sizing: border-box;
 }
 
 ::selection {
     background-color: #b6ecd7;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+}
+h1 { font-size: 2em;    }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.4em;  }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1.15em; }
+h6 { font-size: 1em;    }
+
+img {
+    vertical-align: middle;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
 a {
     color: #0eb573;
+    text-decoration: none;
     transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
     -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
     -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
@@ -33,6 +52,16 @@ a:hover {
 mark {
     background-color: #e3e4b852;
     padding: 0.2em;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .meta {
@@ -62,6 +91,7 @@ mark {
 /* Template: blog/single */
 .post-heading {
     font-family: {{ .Site.Params.fonts.postHeading | default .Site.Data.themedefaults.fonts.postHeading }};
+    font-size: 2.5rem;
 }
 
 .frontmatter {
@@ -166,7 +196,6 @@ mark {
 }
 
 .terms-list a.pill:hover {
-    text-decoration: none;
     color: {{ .Site.Params.colors.body | default .Site.Data.themedefaults.colors.body }};;
     opacity: 0.8;
 }
@@ -183,7 +212,6 @@ mark {
     -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
     -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
     -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    text-decoration: none;
 }
 
 .social a:hover {
@@ -225,10 +253,6 @@ mark {
     margin-bottom: 3rem;
     display: flex;
     align-items: center;
-}
-
-#header a:hover {
-    text-decoration: none;
 }
 
 #header .main-header-section {
@@ -276,6 +300,10 @@ mark {
     font-size: 1.1em;
     line-height: 1.75em;
     color: #313537;
+}
+
+#content .markdown a:hover {
+    text-decoration: underline;
 }
 
 #content twitterwidget {

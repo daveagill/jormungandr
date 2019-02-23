@@ -20,9 +20,7 @@
 
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="shortcut icon" href="{{ if .Site.Params.faviconfile }}{{ .Site.Params.faviconfile }}{{ else }}/img/favicon.ico{{ end }}">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha256-azvvU9xKluwHFJ0Cpgtf0CYzK7zgtOznnzxV4924X1w=" crossorigin="anonymous" />
-
+    
     {{ $style := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main.css" . | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 

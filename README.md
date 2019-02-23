@@ -63,7 +63,6 @@ Look at the [example site](https://github.com/daveagill/jormungandr/tree/master/
 
 ## Dependency versions
 
-* bootstrap: 4.2.1
 * highlightjs: 9.12.0
 * mathjax: 2.7.5
 * progressively: 1.2.5
