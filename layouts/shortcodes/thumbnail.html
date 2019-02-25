@@ -1,11 +1,6 @@
-{{ $sizeParam := .Get 0 }}
-{{ $srcParam := .Get 1 }}
-{{ $titleParam := .Get 2 }}
-{{ if .IsNamedParams }}
-    {{ $sizeParam = .Get "size" }}
-    {{ $srcParam = .Get "src" }}
-    {{ $titleParam = .Get "title" }}
-{{ end }}
+{{ $sizeParam := .Get "size" | default (.Get 0) }}
+{{ $srcParam := .Get "src"  | default (.Get 1) }}
+{{ $titleParam := .Get "title"  | default (.Get 2) }}
 
 {{ $original := .Page.Resources.GetMatch $srcParam }}
 {{ if $original }}
