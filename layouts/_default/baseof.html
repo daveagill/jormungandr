@@ -20,7 +20,7 @@
 
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="shortcut icon" href="{{ if .Site.Params.faviconfile }}{{ .Site.Params.faviconfile }}{{ else }}/img/favicon.ico{{ end }}">
-    
+
     {{ $style := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main.css" . | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
@@ -41,6 +41,8 @@
             <link href="https://fonts.googleapis.com/css?family={{ . }}" rel="stylesheet">
         {{ end }}
     {{ if .Site.Data.fonts.async }}<noscript>{{ end }}
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body>

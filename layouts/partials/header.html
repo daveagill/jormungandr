@@ -26,7 +26,7 @@
         </div>
 
         <div>
-            {{ if .Site.Params.social.enableInHeader | default true }}
+            {{ if .Params.showSocialIconsInHeader | default .Site.Params.showSocialIconsInHeader | default true }}
                 {{ partial "social" . }}
             {{ end }}
             {{ partial "translations" . }}

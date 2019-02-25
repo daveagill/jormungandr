@@ -14,10 +14,18 @@ theme = "jormungandr"
     logoAsCircle = true
 
     highlightjs = true
-    posts_navigation = true
 
-    [params.social]
-        github = "daveagill/jormungandr"
+    [[params.social]]
+        name = "GitHub"
+        url = "https://github.com/daveagill/jormungandr"
+        icon = "fab fa-github"
+        color = "#000000"
+
+    [[params.social]]
+        name = "RSS Feed"
+        url = "/index.xml"
+        icon = "fas fa-rss"
+        color = "#ee802f"
 
     [params.taxonomies]
         showOnBlogSection = true

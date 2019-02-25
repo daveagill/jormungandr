@@ -4,7 +4,7 @@
     {{ end }}
     <div>
         {{ partial "translations" . }}
-        {{ if .Site.Params.social.enableInFooter | default true }}
+        {{ if .Params.showSocialIconsInFooter | default .Site.Params.showSocialIconsInFooter | default true }}
             {{ partial "social" . }}
         {{ end }}
     </div>
