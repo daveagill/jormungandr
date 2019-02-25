@@ -357,15 +357,21 @@ mark {
 /* Partial: Footer */
 #footer {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    align-items: flex-end; /* bottom-align */
     margin-top: 3rem;
     margin-bottom: 1rem;
 }
 
 #footer .copyright {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: #84888a;
+    margin-top: 1em;
+}
+
+#footer .translations {
+    justify-content: center;
 }
 
 /* Partial: postlist */
@@ -429,15 +435,6 @@ mark {
     #header .translations,
     #header .social {
         display: none;
-    }
-
-    #footer {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    #footer .translations {
-        justify-content: center;
     }
 
     .frontmatter {
