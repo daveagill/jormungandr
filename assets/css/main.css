@@ -204,6 +204,7 @@ mark {
 .social {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .social a {
@@ -413,6 +414,20 @@ mark {
 
 .recent-posts .see-more:hover {
     opacity: 1;
+}
+
+/* Shortcode: social */
+#content .markdown .social {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+#content .markdown .social a {
+    font-size: 1.8em;
+}
+
+#content .markdown .social a:hover {
+    text-decoration: none;
 }
 
 
