@@ -20,10 +20,8 @@
         </ul>
     </div>
 
-    <div class="markdown">
-        {{ partial "content" . }}
-    </div>
-
+    {{ partial "content" . }}
+    
     {{ if (.Site.Params.posts_navigation | default true) }}
         <div class="posts-navigation">
             {{ if .PrevInSection }}

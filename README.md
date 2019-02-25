@@ -65,7 +65,6 @@ Look at the [example site](https://github.com/daveagill/jormungandr/tree/master/
 
 * highlightjs: 9.12.0
 * mathjax: 2.7.5
-* progressively: 1.2.5
 * webfont: 1.6.28
 
 ## License
