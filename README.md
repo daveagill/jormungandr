@@ -21,8 +21,8 @@ Originally forked from the [alaGeek](https://github.com/gkmngrgn/hugo-alageek-th
 * `new:` Configurable fonts.
 * `new:` Show/hide taxonomies on /blogs section.
 * `new:` Show/Hide SVG social icons in header, footer or both.
-* `planned:` Add custom CSS scripts.
-* Add custom scripts with `footer_extra.html`.
+* Add custom CSS by overriding `head_extra.html`.
+* Add custom scripts by overriding `body_extra.html`.
 
 ## Beautiful Typography
 

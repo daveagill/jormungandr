@@ -42,7 +42,9 @@
         {{ end }}
     {{ if .Site.Data.fonts.async }}<noscript>{{ end }}
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+
+    {{ partial "head_extra"  . }}
 </head>
 
 <body>
@@ -94,7 +96,7 @@
     {{ end }}
 
     {{ template "_internal/google_analytics_async.html" . }}
-    {{ partial "footer_extra"  . }}
+    {{ partial "body_extra"  . }}
 </body>
 
 </html>
