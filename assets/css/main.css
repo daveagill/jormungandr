@@ -38,11 +38,11 @@ p {
 a {
     color: #0eb573;
     text-decoration: none;
-    transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    transition: color 0.2s ease;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -ms-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
 }
 
 a:hover {
@@ -72,11 +72,11 @@ mark {
 
 .meta a {
     color: #666666;
-    transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    transition: opacity 0.2s ease;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
 }
 
 .meta a:hover {
@@ -210,11 +210,6 @@ mark {
 .social a {
     margin-left: 0.5rem;
     font-size: 1.2em;
-    transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
 }
 
 .social a:not(:hover) {
@@ -387,10 +382,6 @@ mark {
 }
 
 .post-list .post-item {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: -ms-flex;
     display: flex;
     padding-left: 1em;
 }
