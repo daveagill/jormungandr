@@ -7,10 +7,9 @@
     {{ $thumbnail := $original.Resize $sizeParam }}
     {{ $title := default $original.Title $titleParam }}
 
-    <figure style="text-align:center;">
+    <figure>
         <a href="{{ $original.RelPermalink }}">
             <img
-                style="max-width: 100%; height: auto;"
                 src="{{ $thumbnail.RelPermalink }}"
                 width="{{ $thumbnail.Width }}"
                 height="{{ $thumbnail.Height }}"

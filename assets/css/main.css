@@ -345,6 +345,14 @@ mark {
     margin-bottom: 0;
 }
 
+#content .markdown figure {
+    text-align:center;
+}
+
+#content .markdown img {
+    max-width: 100%;
+}
+
 /* Partial: Comments */
 #disqus_thread {
     margin-top: 2rem;
