@@ -5,8 +5,8 @@
         
         {{ partial "translations" . }}
     
-        {{ if .Site.Copyright }}
-            <span class="copyright">{{ .Site.Copyright }}</span>
+        {{ with .Site.Copyright }}
+            <span class="copyright">{{ replace . "{year}" (now.Format "2006") }}</span>
         {{ end }}
     </div>
     

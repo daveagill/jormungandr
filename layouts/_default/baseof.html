@@ -9,7 +9,7 @@
     <meta name="referrer" content="origin">
     <meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
     <meta name="description" content="{{ .Description | default .Site.Params.description }}">
-    <meta name="copyright" content="{{ .Site.Copyright }}">
+    <meta name="copyright" content="{{ replace .Site.Copyright "{year}" (now.Format "2006") }}">
 
     {{ template "_internal/twitter_cards.html" . }}
     {{ template "_internal/opengraph.html" . }}
