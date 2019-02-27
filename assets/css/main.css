@@ -251,10 +251,10 @@ mark {
     flex-grow: 1;
     display: flex;
     justify-content: space-between;
-    margin-left: 2rem;
 }
 
 #header .logo {
+    margin-right: 2rem;
     max-height: 8rem;
     border: 3px solid rgb(0,0,0,0.08);
     {{ if .Site.Params.logoAsCircle }}
