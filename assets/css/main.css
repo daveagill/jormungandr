@@ -27,6 +27,8 @@ h5 { font-size: 1.15em; }
 h6 { font-size: 1em;    }
 
 img {
+    max-width: 100%;
+    height: auto;
     vertical-align: middle;
 }
 
@@ -346,11 +348,7 @@ mark {
 }
 
 #content .markdown figure {
-    text-align:center;
-}
-
-#content .markdown img {
-    max-width: 100%;
+    text-align: center;
 }
 
 /* Partial: Comments */
