@@ -2,27 +2,28 @@
 <html lang="{{ .Site.LanguageCode }}">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-    <meta name="referrer" content="origin">
-    <meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
-    <meta name="description" content="{{ .Description | default .Site.Params.description }}">
-    <meta name="copyright" content="{{ replace .Site.Copyright "{year}" (now.Format "2006") }}">
+    {{ .Hugo.Generator }}
+    <meta name="referrer" content="origin" />
+    <meta name="author" content="{{ .Params.author | default .Site.Params.author }}" />
+    <meta name="description" content="{{ .Description | default .Site.Params.description }}" />
+    <meta name="copyright" content="{{ replace .Site.Copyright "{year}" (now.Format "2006") }}" />
 
     {{ template "_internal/twitter_cards.html" . }}
     {{ template "_internal/opengraph.html" . }}
 
     {{ if .Site.Params.flattr }}
-        <meta name="flattr:id" content="{{ .Site.Params.flattr }}">
+        <meta name="flattr:id" content="{{ .Site.Params.flattr }}" />
     {{ end }}
 
-    <link rel="canonical" href="{{ .Permalink }}">
-    <link rel="shortcut icon" href="{{ if .Site.Params.faviconfile }}{{ .Site.Params.faviconfile }}{{ else }}/img/favicon.ico{{ end }}">
+    <link rel="canonical" href="{{ .Permalink }}" />
+    <link rel="shortcut icon" href="{{ if .Site.Params.faviconfile }}{{ .Site.Params.faviconfile }}{{ else }}/img/favicon.ico{{ end }}" />
 
     {{ $style := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main.css" . | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
     {{ if .Site.Params.highlightjs }}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
@@ -34,7 +35,7 @@
 
     {{ if .Site.Params.fonts.async }}<noscript>{{ end }}
         {{ range (.Site.Params.fonts.googleFonts | default .Site.Data.themedefaults.fonts.googleFonts) }}
-            <link href="https://fonts.googleapis.com/css?family={{ . }}" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family={{ . }}" rel="stylesheet" />
         {{ end }}
     {{ if .Site.Data.fonts.async }}<noscript>{{ end }}
 
