@@ -1,5 +1,5 @@
 <div class="social">
     {{ range .Site.Params.social }}
-        <a href = "{{ .url }}" alt="{{ .name }}" class="{{ .icon }}" style="color:{{ .color | default "black" }};" target="_blank"></a>
+        <a href = "{{ relLangURL .url }}" alt="{{ .name }}" class="{{ .icon }}" style="color:{{ .color | default "black" }};" target="_blank"></a>
     {{ end }}
 </div>
