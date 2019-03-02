@@ -26,9 +26,9 @@ Originally forked from the [alaGeek](https://github.com/gkmngrgn/hugo-alageek-th
 
 ## Beautiful Typography
 
-* _Raleway_ for the titles, light but clearly visible
-* _Merriweather_ for the text, an awesome sans serif font to read without difficulties
-* _Menlo_ for the code
+* _Merriweather_ - Serif font for main site text.
+* _Raleway_ - Light font for blog post titles.
+* _SFMono_ / _Consolas_ - For code.
 
 ## Quick Start
 
