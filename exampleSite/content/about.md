@@ -1,17 +1,23 @@
 +++
-title = "About Hugo"
+title = "Key Features"
 date = "2019-01-01"
 +++
 
-Hugo is the **world’s fastest framework for building websites**. It is written in Go.
+* Minimalist, single-column, responsive design with beautiful typography.
+* Shortcodes for:
+    * Displaying N number of latest posts and pinned posts.
+    * Display social icons anywhere in the page.
+    * Creating thumbnail images.
+* Syntax highlighting via `hightlight.js`.
+* LaTeX support via `MathJax`.
+* Twitter cards.
 
-It makes use of a variety of open source projects including:
+## Shortcode Examples:
+### Recent Posts
+{{< recentposts 3 >}}
 
-* https://github.com/russross/blackfriday
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+### Social icons
+{{< social >}}
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
-
+### Image Thumbnails
+* Example: <a href="/blog/adding-image-thumbnails-to-posts/">Adding Image Thumbnails To Posts</a>.

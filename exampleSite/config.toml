@@ -1,25 +1,50 @@
-title = "Jörmungandr Theme"
+baseURL = "https://example.com"
+languageCode = "en"
 
-author = "Your Name"
-copyright = "Copyright © Your Name; all rights reserved."
+title = "Jörmungandr Theme"
+copyright = "Copyright © {year} Your Name; all rights reserved."
 
 theme = "jormungandr"
+preserveTaxonomyNames = true
 
+disqusShortname = "enter-your-discuss-shortname"
 
 [params]
-    copyright = "© Your Name"
-    copyrightUrl = "https://themes.gohugo.io/theme/jormungandr/"
-    faviconfile = "img/favicon.ico"
-    logofile = "img/logo.jpg"
+    author = "Your Name"
+    description = "A description about your blog or website."
+    
+    logo = "/logo.jpg"
     logoAsCircle = true
 
     highlightjs = true
 
+    [params.taxonomies]
+        showOnBlogSection = true
+        minUsage = 0
+
     [[params.social]]
         name = "GitHub"
-        url = "https://github.com/daveagill/jormungandr"
+        url = "https://github.com"
         icon = "fab fa-github"
         color = "#000000"
+
+    [[params.social]]
+        name = "Twitter"
+        url = "https://twitter.com"
+        icon = "fab fa-twitter"
+        color = "#1da1f2"
+
+    [[params.social]]
+        name = "LinkedIn"
+        url = "https://linkedin.com/"
+        icon = "fab fa-linkedin"
+        color = "#007bb5"
+
+    [[params.social]]
+        name = "YouTube"
+        url = "https://youtube.com"
+        icon = "fab fa-youtube"
+        color = "#ff0000"
 
     [[params.social]]
         name = "RSS Feed"
@@ -27,18 +52,14 @@ theme = "jormungandr"
         icon = "fas fa-rss"
         color = "#ee802f"
 
-    [params.taxonomies]
-        showOnBlogSection = true
-        minUsage = 0
-
 [[menu.main]]
-    identifier = "blog"
+    pre = "↪ "
     name = "Blog"
     url = "/blog/"
     weight = 10
 
 [[menu.main]]
-    identifier = "about"
-    name = "About"
+    pre = "↪ "
+    name = "About The Theme"
     url = "/about/"
     weight = 20
