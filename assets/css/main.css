@@ -3,6 +3,11 @@ body {
     background-color: {{ .Site.Params.colors.body | default .Site.Data.themedefaults.colors.body }};
     font-family: {{ .Site.Params.fonts.body | default .Site.Data.themedefaults.fonts.body }};
     line-height: 1.5;
+
+    /* prevent vertical scrollbar from pushing content */
+    /* see: https://aykevl.nl/2014/09/fix-jumping-scrollbar */
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 *, ::after, ::before {
