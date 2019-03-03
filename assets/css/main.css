@@ -223,6 +223,10 @@ mark {
     color: rgba(0, 0, 0, 0.5) !important;
 }
 
+.social a:first-child {
+    margin-left: 0;
+}
+
 /* Partial: Translations */
 .translations {
     display: flex;
