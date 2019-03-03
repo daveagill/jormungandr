@@ -57,7 +57,7 @@ a:hover {
 }
 
 mark {
-    background-color: #e3e4b852;
+    background-color: rgba(228, 218, 184, 0.35);
     padding: 0.2em;
 }
 
