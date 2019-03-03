@@ -53,13 +53,13 @@ disqusShortname = "enter-your-discuss-shortname"
         color = "#ee802f"
 
 [[menu.main]]
-    pre = "↪ "
+    pre = "↪&#xFE0E; "
     name = "Blog"
     url = "/blog/"
     weight = 10
 
 [[menu.main]]
-    pre = "↪ "
+    pre = "↪&#xFE0E; "
     name = "About The Theme"
     url = "/about/"
     weight = 20
