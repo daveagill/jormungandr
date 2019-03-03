@@ -395,6 +395,7 @@ mark {
 
 .post-list .post-item .meta {
     padding-right: 1.5em;
+    flex-shrink: 0;
 }
 
 /* Shortcode: recentposts */
