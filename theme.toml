@@ -4,7 +4,7 @@ licenselink = "https://github.com/daveagill/jormungandr/blob/master/LICENSE.md"
 description = "Jörmungandr is a minimalist, responsive Hugo theme."
 homepage = "https://github.com/daveagill/jormungandr"
 tags = ["minimalist", "clean", "responsive", "typography"]
-features = ["flexible", "fast", "highlight.js", "thumbnails", "internationalization"]
+features = ["flexible", "fast", "thumbnails", "internationalization"]
 min_version = 0.43
 
 [author]

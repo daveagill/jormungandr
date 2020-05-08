@@ -7,7 +7,7 @@ Originally forked from the [alaGeek](https://github.com/gkmngrgn/hugo-alageek-th
 ## Key Features
 
 * Minimalist, single-column, responsive design with beautiful typography.
-* Syntax highlighting with `hightlight.js`.
+* Syntax highlighting - works smoothly with Hugo's built-in build-time syntax highlighter.
 * LaTeX support with `MathJax`.
 * Twitter cards.
 * `new:` Disqus comments system.
@@ -61,9 +61,15 @@ Set the `theme` property in your `config.toml` file:
 
 Look at the [example site](https://github.com/daveagill/jormungandr/tree/master/exampleSite) to see other config options that you can set.
 
+For syntax highlighting we recommend the following:
+
+    [markup.highlight]
+        style = "dracula"
+        guessSyntax = true
+        lineNos = true
+
 ## Dependency versions
 
-* highlightjs: 9.12.0
 * mathjax: 2.7.5
 * webfont: 1.6.28
 
